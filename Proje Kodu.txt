@@ -1,0 +1,19 @@
+int led = 7; // Ledin bağlı olduğu pinin numarasını led adında bir değişkene ata
+int LDRPin = A3; // LDR nin bağlı olduğu analog pin numarasını bir değişkene ata
+
+void setup() {
+  pinMode(led, OUTPUT); // Ledin bağlı olduğu pini çıkış pini olarak işaretle
+  pinMode(LDRPin, INPUT); // LDR nin bağlı olduğu pini giriş pini olarak işaretle
+}
+
+void loop() {
+  int isik_miktari = analogRead(LDRPin); // LDR sensörünün değerini isik_miktari değişkenine ata
+  if (isik_miktari>250) // Işık miktarı eşik değeri olarak seçilen 300 den fazla ise
+  {
+    digitalWrite(led, LOW); // Ledi kapat
+  }
+  else // Işık miktarı eşik değeri olarak seçilen 300 den az ise
+  {
+    digitalWrite(led, HIGH); // Ledi aç
+  }
+}
