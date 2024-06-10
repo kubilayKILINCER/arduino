@@ -8,11 +8,11 @@ void setup() {
 
 void loop() {
   int isik_miktari = analogRead(LDRPin); // LDR sensörünün değerini isik_miktari değişkenine ata
-  if (isik_miktari>250) // Işık miktarı eşik değeri olarak seçilen 300 den fazla ise
+  if (isik_miktari>250) // Işık miktarı eşik değeri olarak seçilen 250 den fazla ise
   {
     digitalWrite(led, LOW); // Ledi kapat
   }
-  else // Işık miktarı eşik değeri olarak seçilen 300 den az ise
+  else // Işık miktarı eşik değeri olarak seçilen 250 den az ise
   {
     digitalWrite(led, HIGH); // Ledi aç
   }
